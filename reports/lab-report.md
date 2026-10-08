@@ -1,35 +1,35 @@
-# Coding Standards Lab Report
+# Informe de laboratorio: estándares de codificación
 
-## Introduction
+## Introducción
 
-This project uses Pylint to check Python code because it reports errors, warnings, and style problems without requiring changes to the program's behavior. The public repository is available at <https://github.com/FrancisLoayza/Coding_standards>.
+Elegí Pylint para revisar el código Python porque detecta errores, advertencias y problemas de estilo sin modificar el comportamiento del programa. El repositorio público está disponible en <https://github.com/FrancisLoayza/Coding_standards>.
 
-## Development
+## Desarrollo
 
-The initial report was generated with Pylint 4.1.2 against the original `test.py` retrieved from the repository's starting commit. It found 19 problems and returned exit code 22. The final report checks `test.py` and `test_student.py`; it found zero problems and Pylint rated the code 10.00/10.
+El reporte inicial se generó con Pylint 4.1.2 sobre el `test.py` original, recuperado del commit inicial del repositorio. Encontró 19 problemas y devolvió el código de salida 22. El reporte final revisa `test.py` y `test_student.py`; encontró cero problemas y Pylint calificó el código con 10.00/10.
 
-The student grade tracker now validates non-empty names and IDs, accepts numeric grades from 0 through 100, calculates averages and letter grades, determines Passed/Failed and honor-roll status, deletes grades by value or index, and prints the required summary. Invalid input prints a clear error and returns to the menu instead of terminating the program. Seven unit tests cover the main rules and error cases.
+El programa valida que el nombre y el ID no estén vacíos, acepta notas numéricas entre 0 y 100, calcula promedios y notas en letra, determina el estado Passed/Failed y el cuadro de honor, elimina notas por valor o índice y muestra el resumen requerido. Ante una entrada inválida, muestra un mensaje claro y vuelve al menú en lugar de terminar el programa. Siete pruebas unitarias cubren las reglas principales y los casos de error.
 
-The GitHub Actions workflow is stored at `.github/workflows/lint.yml`. It is configured for pull requests targeting `main` and can also be started manually. Its current actor filter means the lint job runs only when the GitHub actor is `FrancisLoayza`; if the rubric requires linting every contributor's pull request, remove that filter.
+El workflow de GitHub Actions está en `.github/workflows/lint.yml`. Está configurado para pull requests dirigidos a `main` y también permite ejecución manual. El filtro actual limita el trabajo de lint a eventos cuyo actor de GitHub sea `FrancisLoayza`; si la rúbrica exige revisar los pull requests de cualquier colaborador, hay que quitar ese filtro.
 
-### Initial report
+### Reporte inicial
 
-![Initial Pylint report showing 19 problems](pylint-initial.png)
+![Reporte inicial de Pylint con 19 problemas](pylint-initial.png)
 
-[Open the initial HTML report](pylint-initial.html)
+[Abrir el reporte HTML inicial](pylint-initial.html)
 
-### Final report
+### Reporte final
 
-![Final Pylint report showing zero problems](pylint-final.png)
+![Reporte final de Pylint con cero problemas](pylint-final.png)
 
-[Open the final HTML report](pylint-final.html)
+[Abrir el reporte HTML final](pylint-final.html)
 
-## Conclusions
+## Conclusiones
 
-The final code meets the listed grade-tracking requirements, passes all seven unit tests, and has no Pylint findings. The initial and final reports document the improvement from the original code.
+El código final cumple los requisitos indicados para el control de notas, pasa las siete pruebas unitarias y no tiene hallazgos de Pylint. Los reportes inicial y final documentan la mejora respecto al código original.
 
-## Recommendations
+## Recomendaciones
 
-- Push the finished code and reports to the public repository and confirm the workflow succeeds in the GitHub Actions tab.
-- Keep the actor filter only if the assignment explicitly requires restricting execution to this account; otherwise remove it so every pull request to `main` is linted.
-- Include screenshots of the successful test run and GitHub Actions run if the instructor expects evidence beyond the two Pylint report captures.
+- Confirmar en la pestaña Actions de GitHub que el workflow finaliza correctamente.
+- Mantener el filtro de actor solo si la consigna requiere restringir la ejecución a esta cuenta; de lo contrario, quitarlo para revisar todos los pull requests a `main`.
+- Agregar capturas de las pruebas y de GitHub Actions si el docente pide evidencia adicional a las capturas de Pylint.
