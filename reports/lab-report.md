@@ -12,6 +12,12 @@ El programa valida que el nombre y el ID no estén vacíos, acepta notas numéri
 
 El workflow de GitHub Actions está en `.github/workflows/lint.yml`. Está configurado para pull requests dirigidos a `main` y también permite ejecución manual. El filtro actual limita el trabajo de lint a eventos cuyo actor de GitHub sea `FrancisLoayza`; si la rúbrica exige revisar los pull requests de cualquier colaborador, hay que quitar ese filtro.
 
+La ejecución manual #1 terminó correctamente: el trabajo `lint` finalizó en verde.
+
+![Ejecución exitosa de GitHub Actions](github-actions-success.png)
+
+[Abrir la ejecución en GitHub](https://github.com/FrancisLoayza/Coding_standards/actions/runs/37810039805)
+
 ### Reporte inicial
 
 ![Reporte inicial de Pylint con 19 problemas](pylint-initial.png)
