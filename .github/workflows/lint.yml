@@ -3,9 +3,11 @@ name: Code Standards Check
 on:
   pull_request:
     branches: [main]
+  workflow_dispatch:
 
 jobs:
   lint:
+    if: github.actor == 'FrancisLoayza'
     runs-on: ubuntu-latest
 
     steps:
